@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011299057704",
+    "project_id": "usmp-60cd7",
+    "storage_bucket": "usmp-60cd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011299057704:android:b1892b9c31d4364d62751d",
+        "android_client_info": {
+          "package_name": "com.usmpapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvFs_ozhkaD9AYa4Qox-uCms4_XxyowEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+export { default as MyCoursesDetailScreen } from './MyCoursesDetail.screen'
+export { default as MyCourses } from './MyCourses.screen'
+export { default as MyPuntualityScreen } from './MyPuntuality.screen'
+export { default as MyStudentsScreen } from './MyStudents.screen'
+export { default as MyCourseNotificationsScreen } from './MyCourseNotifications.screen'

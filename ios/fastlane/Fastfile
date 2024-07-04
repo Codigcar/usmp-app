@@ -1,0 +1,45 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+  
+  desc 'Build Dev'
+  lane :buildDebug do
+    match(app_identifier: "com.pe.usmpapp.alumnos.dev2", type: 'development')
+    increment_build_number
+    increment_version_number(version_number: "1.0", xcodeproj: "usmpapp.xcodeproj")
+    build_app(
+      scheme: "usmpapp",
+      output_name: "prueba1",
+      export_method: "development"
+    )
+  end
+
+  desc 'Distribute app with Firebase'
+  lane :distribute do
+    firebase_app_distribution(
+      app: '1:1011299057704:ios:d68710c0005a71ff62751d',
+      groups: 'dev-team',
+      firebase_cli_token: '1//0hHF4QfGX1HxfCgYIARAAGBESNwF-L9IroqssPyiyqpTAq_nL8DXOvsqilkG9QARjKUa-ELrlKtaRrec5Gpu8XdrOGBL9cED7-Ow',
+      release_notes: 'prueba1'
+    )
+  end
+end
